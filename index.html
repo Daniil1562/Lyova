@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style id="style"></style>
     <script>
-      document.getElementById("style").innerHTML =
-        "
-        html{
-          background: #999999;
-        }
-        ";
+      const userAgent = navigator.userAgent;
+      var textSize;
+      if (userAgent.includes("Android") || userAgent.includes("iPhone")){
+        textSize = 40
+      }else{
+        textSize = 15
+      }
     </script>
+    <style id="style">
+      body{
+        textSize: var(textSize);
+      }
+      
+    </style>
+    fff
   </head>
 </html>
