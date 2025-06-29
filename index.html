@@ -12,11 +12,19 @@
       const userAgent = navigator.userAgent;
       var textSize;
       if (userAgent.includes("Android") || userAgent.includes("iPhone")){
-        textSize = 100px;
-        $(this).css('font-size', '100px');
+        //textSize = 100px;
+        //$(this).css('font-size', '100px');
+        $('.content').each(function( index ) {
+          //textLength = $(this).text().length;
+          $(this).css('font-size', 100 + 'px');
+        });
       }else{
-        textSize = 15px;
-        $(this).css('font-size', '20px');
+        //textSize = 15px;
+        //$(this).css('font-size', '20px');
+        $('.content').each(function( index ) {
+          //textLength = $(this).text().length;
+          $(this).css('font-size', 20 + 'px');
+        });
       }
     </script>
     fff
