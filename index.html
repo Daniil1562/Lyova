@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script>
-      const userAgent = navigator.userAgent;
-      var textSize;
-      if (userAgent.includes("Android") || userAgent.includes("iPhone")){
-        textSize = 40px;
-      }else{
-        textSize = 15px;
-      }
-    </script>
     <style id="style">
       body{
         textSize: var(textSize);
       }
       
     </style>
-    
+    <script>
+      const userAgent = navigator.userAgent;
+      var textSize;
+      if (userAgent.includes("Android") || userAgent.includes("iPhone")){
+        textSize = 40px;
+        $(this).css('font-size', '40px');
+      }else{
+        textSize = 15px;
+        $(this).css('font-size', '20px');
+      }
+    </script>
   </head>
   <body>
     fff
