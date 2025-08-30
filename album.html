@@ -23,13 +23,29 @@
         src: url("https://vk.com/album-232338265_308282957");
       }
     </style>
-    <title>Лёвушкины новости</title>
+    <title>Лёвушкин альбом</title>
   </head>
   <body>
-    <h1>Лёвушкины новости</h1>
+    <h1>Лёвушкин альбом</h1>
     <p class="blockPin">
       В текущем сайте идёт разработка
     </p>
+    <div id="data"></div>
+    <script>
+      fetch('https://www.cbr.ru/currency_base/daily/')
+        .then(response => response.text())
+        .then(data => {
+          const parser = new DOMParser();
+          const pageDOM = parser.parseFromString(data, "text/html");
+          const tableData = pageDOM.querySelector('.data');
+          
+          // Для примера	
+          const dataElement = document.getElementById('data');
+          dataElement.innerHTML = tableData;
+      
+          console.log(tableData)
+        });
+    </script>
     <site></site>
   </body>
 </html>
