@@ -32,18 +32,14 @@
     </p>
     <div id="data"></div>
     <script>
+        
       fetch('https://api.vk.com/method/photos.get?owner_id=-37276776&album_id=154823866&offset=100&count=2')
-        .then(response => response.text())
+        .then(response => response.json()) // Парсинг ответа как JSON
         .then(data => {
-          const parser = new DOMParser();
-          const pageDOM = parser.parseFromString(data, "text/html");
-          const tableData = pageDOM.querySelector('.data');
-          
-          // Для примера	
-          const dataElement = document.getElementById('data');
-          dataElement.innerHTML = tableData;
-      
-          console.log(tableData)
+          console.log(data); // Вывод полученных данных
+        })
+        .catch(error => {
+          console.error('Ошибка при запросе:', error);
         });
     </script>
     <site></site>
