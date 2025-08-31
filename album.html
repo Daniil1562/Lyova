@@ -32,7 +32,7 @@
     </p>
     <div id="data"></div>
     <script>
-      fetch('https://vk.com/album-232338265_308282957')
+      fetch('https://api.vk.com/method/photos.get?owner_id=-37276776&album_id=154823866&offset=100&count=2')
         .then(response => response.text())
         .then(data => {
           const parser = new DOMParser();
