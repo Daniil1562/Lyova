@@ -18,6 +18,11 @@
       img{
         border-radius: 10px;
       }
+      div.scrollz{
+        border-radius: 20px;
+        padding: 0.9rem 1.35rem;
+        background: orange;
+      }
     </style>
     <script>
       const userAgent = navigator.userAgent;
@@ -43,11 +48,16 @@
   <body>
     <h1>Лёвушка</h1>
     
-    <div style="height: 200px; overflow-y: auto;">
-        <!-- Ваше содержимое здесь -->
-        <p>Этот текст будет прокручиваться.</p>
-        <p>...</p>
-        <p>Очень много текста, чтобы появился скроллбар.</p>
+    <div style="height: 200px; overflow-z: auto;">
+        <div class="scrollz">
+          Котико1
+        </div>
+        <div class="scrollz">
+          Котико2
+        </div>
+      <div class="scrollz">
+          Котико3
+        </div>
     </div>
     
     <a class="buttonq" href="https://t.me/lyova_z">
