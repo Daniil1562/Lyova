@@ -44,6 +44,7 @@
       }
     </script>
     <title>Лёвушка</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   </head>
   <body>
     <h1>Лёвушка</h1>
@@ -58,7 +59,15 @@
           
           <div id="qrcode"></div>
           <script>
-            document.getElementById('qrcode').append(QRCreator('https://vk.ru/lyova_z').result);
+            // create a new QRCode instance
+            let qrcode = new QRCode(
+                document.querySelector(".qrcode")
+            );
+            // Initial QR code generation
+            // with a default message
+            
+            qrcode.makeCode("https://vk.ru/lyova_z")
+            
           </script>
           
         </scrollz>
